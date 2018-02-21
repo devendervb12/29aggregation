@@ -1,0 +1,30 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="zcombobox.Countries" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="Title">
+		<content>
+	        <ComboBox>
+	            <items>
+	               <core:Item text="{/countries/0/name}"/>
+	               <core:Item text="{/countries/1/name}"/>
+	               <core:Item text="{/countries/2/name}"/>
+	            </items>
+	        </ComboBox>
+	        
+	        <ComboBox binding="{/countries}">
+	            <items>
+	               <core:Item text="{0/name}"/>
+	               <core:Item text="{1/name}"/>
+	               <core:Item text="{2/name}"/>
+	            </items>
+	        </ComboBox>
+	        
+	        <ComboBox items="{/}">
+	           <items>
+	              <core:Item text="{name}"/><!-- template -->
+	           </items>
+	        </ComboBox>
+	        
+	        
+		</content>
+	</Page>
+</core:View>
