@@ -11,6 +11,10 @@ sap.ui.controller("zcombobox.Countries", {
         oModel.setSizeLimit(255);
         this.getView().setModel(oModel);
 		
+        
+       var ocombo = this.getView().byId("idcombo");
+       
+       ocombo.bindAggregation("items", "/", new sap.ui.core.Item({ text : "{name}"}));
 	},
 
 /**
